@@ -6,8 +6,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/Limerio/go-training/shell-go/commands"
-	"github.com/Limerio/go-training/shell-go/utils"
+	"github.com/Limerio/shell-go/commands"
+	"github.com/Limerio/shell-go/utils"
 )
 
 func main() {
@@ -18,7 +18,7 @@ func main() {
 	for {
 		fmt.Printf("%s > ", utils.FormatPathInShell(os.Getenv("PWD")))
 		scanner.Scan()
-		prompt := strings.Split(scanner.Text(), " ")
+		prompt := strings.Fields(scanner.Text())
 		cmd := prompt[0]
 		args := prompt[1:]
 
@@ -30,6 +30,7 @@ func main() {
 			"exit":     commands.Exit,
 			"hostname": commands.Hostname,
 			"mkdir":    commands.Mkdir,
+			"nslookup": commands.NsLookup,
 			"pwd":      commands.Pwd,
 			"ls":       commands.Ls,
 			"rm":       commands.Rm,

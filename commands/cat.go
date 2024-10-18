@@ -5,7 +5,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/Limerio/go-training/shell-go/utils"
+	"github.com/Limerio/shell-go/utils"
 	"github.com/spf13/cobra"
 )
 

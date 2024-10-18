@@ -1,7 +1,7 @@
 package commands
 
 import (
-	"github.com/Limerio/go-training/shell-go/utils"
+	"github.com/Limerio/shell-go/utils"
 )
 
 func Exit(args []string) {

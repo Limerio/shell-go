@@ -1,4 +1,4 @@
-module github.com/Limerio/go-training/shell-go
+module github.com/Limerio/shell-go
 
 go 1.23.2
 
