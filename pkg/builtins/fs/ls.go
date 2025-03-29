@@ -14,7 +14,7 @@ func render(i int, e fs.DirEntry) {
 	if i == 0 {
 		fmt.Print(e.Name())
 	} else {
-		fmt.Printf("\t %s", e.Name())
+		fmt.Printf("%s \t", e.Name())
 	}
 }
 
