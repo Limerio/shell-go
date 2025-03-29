@@ -1,4 +1,4 @@
-package utils
+package prompt
 
 import (
 	"fmt"
@@ -6,17 +6,7 @@ import (
 	"strings"
 )
 
-func Exit() {
-	fmt.Println("Goodbye")
-	os.Exit(0)
-}
-
-func Escape() {
-	fmt.Println()
-}
-
 func FormatPathInShell(path string) string {
-
 	homeEnvVar := os.Getenv("HOME")
 
 	if strings.HasPrefix(path, homeEnvVar) {

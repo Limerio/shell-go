@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/Limerio/shell-go/utils"
+	"github.com/Limerio/shell-go/internal/shell/exit"
 )
 
 func NsLookup(args []string) {
@@ -24,19 +24,19 @@ func NsLookup(args []string) {
 	server := strings.TrimSpace(strings.Split(string(data), "nameserver")[1])
 
 	fmt.Printf("Server: \t%s", server)
-	utils.Escape()
+	exit.Escape()
 	fmt.Printf("Address: \t%s#53", server)
-	utils.Escape()
-	utils.Escape()
+	exit.Escape()
+	exit.Escape()
 
 	fmt.Println("Non-authoritative answer:")
 	for _, n := range ns {
 		if !strings.ContainsAny(n, ":") {
 			fmt.Printf("Name:   %s", args[0])
-			utils.Escape()
+			exit.Escape()
 			fmt.Printf("Address: %s", n)
-			utils.Escape()
+			exit.Escape()
 		}
 	}
-	utils.Escape()
+	exit.Escape()
 }

@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/Limerio/shell-go/utils"
+	"github.com/Limerio/shell-go/internal/shell/exit"
 	"github.com/spf13/cobra"
 )
 
@@ -71,5 +71,5 @@ func Ls(args []string) {
 	if err := lsCmd.Execute(); err != nil {
 		fmt.Println(err)
 	}
-	utils.Escape()
+	exit.Escape()
 }

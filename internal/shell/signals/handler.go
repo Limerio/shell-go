@@ -1,15 +1,17 @@
-package utils
+package signals
 
 import (
 	"os"
 	"os/signal"
 	"syscall"
+
+	"github.com/Limerio/shell-go/internal/shell/exit"
 )
 
-func SignalC() {
+func HandleInterrupt() {
 	sig := make(chan os.Signal, 1)
 	signal.Notify(sig, os.Interrupt, syscall.SIGTERM)
 	<-sig
-	Escape()
-	Exit()
+	exit.Escape()
+	exit.Exit()
 }

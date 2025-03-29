@@ -5,7 +5,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/Limerio/shell-go/utils"
+	"github.com/Limerio/shell-go/internal/shell/exit"
 	"github.com/spf13/cobra"
 )
 
@@ -27,7 +27,7 @@ func run_cat(cmd *cobra.Command, args []string) {
 	if nValue {
 		for i, l := range splittedString {
 			fmt.Printf("%d %s", i+1, l)
-			utils.Escape()
+			exit.Escape()
 		}
 		return
 	}
@@ -43,7 +43,7 @@ func run_cat(cmd *cobra.Command, args []string) {
 
 			if len(splittedString)-1 != i {
 				fmt.Printf("%s$", l)
-				utils.Escape()
+				exit.Escape()
 				continue
 			}
 			fmt.Println(l)
