@@ -37,7 +37,7 @@ func run(cmd *cobra.Command, args []string) {
 		return
 	}
 
-	entries, err := os.ReadDir("./")
+	entries, err := os.ReadDir(os.Getenv("PWD"))
 	if err != nil {
 		fmt.Println(err)
 		return
