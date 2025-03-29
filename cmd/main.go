@@ -32,6 +32,8 @@ func main() {
 			"clear":    ioCommands.Clear,
 			"echo":     ioCommands.Echo,
 			"exit":     systemCommands.Exit,
+			"export":   systemCommands.Export,
+			"env":      systemCommands.Env,
 			"hostname": systemCommands.Hostname,
 			"mkdir":    fsCommands.Mkdir,
 			"nslookup": networkCommands.NsLookup,
