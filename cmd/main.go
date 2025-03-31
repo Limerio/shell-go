@@ -39,10 +39,12 @@ func main() {
 			"nslookup": networkCommands.NsLookup,
 			"pwd":      fsCommands.Pwd,
 			"ln":       fsCommands.Link,
+			"link":     fsCommands.Link,
 			"ls":       fsCommands.Ls,
 			"rm":       fsCommands.Rm,
 			"rmdir":    fsCommands.Rmdir,
 			"touch":    fsCommands.Touch,
+			"whoami":   systemCommands.Whoami,
 		}
 
 		command, ok := cmdMap[cmd]
@@ -57,4 +59,3 @@ func main() {
 func defaultFunc() {
 	fmt.Println("Unknown command")
 }
-
