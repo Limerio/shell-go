@@ -38,6 +38,7 @@ func main() {
 			"mkdir":    fsCommands.Mkdir,
 			"nslookup": networkCommands.NsLookup,
 			"pwd":      fsCommands.Pwd,
+			"ln":       fsCommands.Link,
 			"ls":       fsCommands.Ls,
 			"rm":       fsCommands.Rm,
 			"rmdir":    fsCommands.Rmdir,
@@ -56,3 +57,4 @@ func main() {
 func defaultFunc() {
 	fmt.Println("Unknown command")
 }
+
