@@ -3,4 +3,3 @@ run:
 
 build:
 	go build -o shell-go cmd/main.go
-
